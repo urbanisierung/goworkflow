@@ -11,7 +11,7 @@ module.exports = {
     navbar: {
       title: 'Go Workflow!',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Go Workflow!',
         src: 'img/logo.svg',
       },
       items: [
