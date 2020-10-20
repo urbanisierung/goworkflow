@@ -11,36 +11,36 @@ const overview = {
 };
 
 const features = [
-  // {
-  //   title: "Go Workflow!",
-  //   imageUrl: "img/goworkflow.png",
-  //   description: (
-  //     <>
-  //       Docusaurus was designed from the ground up to be easily installed and
-  //       used to get your website up and running quickly.
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: 'Focus on What Matters',
-  //   imageUrl: 'img/undraw_docusaurus_tree.svg',
-  //   description: (
-  //     <>
-  //       Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-  //       ahead and move your docs into the <code>docs</code> directory.
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: 'Powered by React',
-  //   imageUrl: 'img/undraw_docusaurus_react.svg',
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
+  {
+    title: "Control",
+    imageUrl: "img/control.png",
+    description: (
+      <>
+        Not all processes must be defined as workflows. But: you need control
+        over your processes in any case!
+      </>
+    ),
+  },
+  {
+    title: "Automation",
+    imageUrl: "img/automation.png",
+    description: (
+      <>
+        With control comes overview and transparency. This allows bottlenecks
+        and problems to be identified and automated solutions to be built.
+      </>
+    ),
+  },
+  {
+    title: "Optimization",
+    imageUrl: "img/optimization.png",
+    description: (
+      <>
+        Automated processes must always be put to the test. Standstill is a step
+        backwards, so constantly check and optimize!
+      </>
+    ),
+  },
 ];
 
 function Feature({ imageUrl, title, description }) {
@@ -58,30 +58,17 @@ function Feature({ imageUrl, title, description }) {
   );
 }
 
-function Overview({ imageUrl }) {
-  const imgUrl = useBaseUrl(imageUrl);
-  return (
-    <div>
-      {imgUrl && (
-        <div className="text--center">
-          <img src={imgUrl} alt={title} />
-        </div>
-      )}
-    </div>
-  );
-}
-
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={`${siteConfig.title}`}
       description="Description will go into a meta tag in <head />"
     >
       <header className={clsx("hero hero--primary", styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <h1 className="hero__title center">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
@@ -97,17 +84,6 @@ function Home() {
         </div>
       </header>
       <main>
-        {overview && (
-          <section>
-            <div className="container">
-              <div>
-                <div className="text--center">
-                  <img src="/img/goworkflow.png" alt="goworkflow" />
-                </div>
-              </div>
-            </div>
-          </section>
-        )}
         {features && features.length > 0 && (
           <section className={styles.features}>
             <div className="container">
