@@ -8,7 +8,7 @@ on:
 env:
   # Used by docusaurus publish-site command
   GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-  GIT_USERNAME: camunda-cloud-bot
+  GIT_USERNAME: urbanisierung
   REPO: ${{ github.repository }}
 
 jobs:
